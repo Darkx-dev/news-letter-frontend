@@ -11,13 +11,13 @@
 
 <body>
     <main class="grid place-items-center h-screen">
-        <div class="bg-white flex max-sm:flex-col-reverse max-sm:w-screen max-sm:items-center max-sm:h-screen max-sm:gap-1 max-sm:rounded-none max-sm:p-0 w-fit p-4 rounded-3xl justify-between max-sm:justify-center">
-            <div class="w-1/2 max-sm:w-full flex flex-col justify-center space-y-10 p-8 max-sm:p-7 ">
+        <div class="bg-white flex max-sm:flex-col-reverse max-sm:w-screen max-sm:items-center max-sm:h-full max-sm:gap-1 max-sm:rounded-none max-sm:p-0 w-fit p-4 rounded-3xl justify-between max-sm:justify-center">
+            <div class="w-1/2 max-sm:w-full flex flex-col text-[#242742] justify-center space-y-10 p-8 max-sm:p-7 ">
                 <div class="space-y-5">
                     <div class="text-5xl max-sm:text-4xl font-[700]">Stay updated!</div>
                     <div class="text-sm">Join 60,000+ production managers recieving monthly updates on:</div>
                     <div class="text-sm">
-                        <ul class="space-y-2">
+                        <ul class="space-y-4">
                             <li class="flex space-x-3 items-start">
                                 <img src="./assets/images/icon-list.svg" alt="icon-list">
                                 <span>Product discovery and building what matters</span>
@@ -34,10 +34,12 @@
                     </div>
                 </div>
                 <div class="flex flex-col gap-2 text-sm">
-                    <span class="font-[700]">Email address</span>
-                    <input class="border-2 p-4 rounded-lg" type="email" name="" id="" placeholder="email@company.com">
-                    <button class="bg-black text-white my-4 rounded-lg font-[700] p-4" type="submit">Subscribe to monthly newsletter</button>
-
+                    <div class="flex justify-between font-[700]">
+                        <span class="">Email address</span>
+                        <span class="text-[#ff6257]" id="e-warn" hidden>Valid email required</span>
+                    </div>
+                    <input class="border-2 p-4 max-sm:outline-none rounded-lg" onkeyup="handleEmail(event)" type="email" name="email" id="e-input" placeholder="email@company.com">
+                    <button class="bg- text-white my-4 rounded-lg font-[700] p-4" type="submit" id="btn-sub">Subscribe to monthly newsletter</button>
                 </div>
             </div>
             <div>
@@ -47,5 +49,5 @@
         </div>
     </main>
 </body>
-
+<script src="app.js"></script>
 </html>
