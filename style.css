@@ -25,12 +25,12 @@ input:hover {
     cursor: pointer;
 }
 
-#btn-sub {
+.btn, #btn-sub{
+    background: var(--DarkSlateGrey);
     transition: all .2s;
-    background: var(--DarkSlateGrey)
 }
 
-#btn-sub:hover {
+.btn:hover, #btn-sub:hover {
     box-shadow: 0px 3px 10px 0px var(--Tomato);
     background: linear-gradient(to right, var(--Tomato) 40%, hsl(25, 91%, 65%));
 }
